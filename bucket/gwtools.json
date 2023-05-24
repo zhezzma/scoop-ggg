@@ -23,6 +23,5 @@
   },
   "autoupdate": {
     "url": "https://ghproxy.com/https://github.com/zhemima/gwtools/releases/download/v$version/gwtools-$version.7z"
-  },
-  "_from": "okibcn/ScoopMaster"
+  }
 }
