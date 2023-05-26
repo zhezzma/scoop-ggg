@@ -23,7 +23,7 @@
         ]
     ],
     "checkver": {
-        "url": "https://platform.wps.cn/",
+        "url": "https://www.wps.cn/",
         "regex": "WPS_Setup_([\\d.]+)\\.exe"
     },
     "autoupdate": {
