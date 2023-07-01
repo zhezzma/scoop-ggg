@@ -36,7 +36,7 @@
             "    if (Test-Path \"$env:USERPROFILE\\.config\\clash\") {",
             "        Copy-Item -Path \"$env:USERPROFILE\\.config\\clash\\*\" -Destination \"$persist_dir\\data\" -Recurse -Container",
             "    }",
-            "}"
+            "}",
         ]
     }, 
     "shortcuts": [
