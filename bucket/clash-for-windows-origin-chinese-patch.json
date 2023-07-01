@@ -31,6 +31,5 @@
     "checkver": "github",
     "autoupdate": {
         "url": "https://ghproxy.com/https://github.com/BoyceLig/Clash_Chinese_Patch/releases/download/$version/app.7z"
-    },
-    "_from": "okibcn/ScoopMaster"
+    }
 }
