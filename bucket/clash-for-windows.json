@@ -38,11 +38,7 @@
             "    }",
             "}"
         ]
-    },
-    "uninstaller": {
-        "script": [
-        ]
-    },
+    }, 
     "shortcuts": [
         [
             "Clash for Windows.exe",
