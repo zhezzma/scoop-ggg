@@ -1,5 +1,5 @@
 {
-    "version": "22621.2361.58.4_3299579",
+    "version": "22621.2361.58.4_dd3bfca",
     "description": "This project aims to enhance the working environment on Windows.",
     "homepage": "https://github.com/zetaloop/ExplorerPatcher",
     "license": {
@@ -8,8 +8,8 @@
     },
     "notes": "Wiki: <https://github.com/zetaloop/ExplorerPatcher/wiki>",
     "depends": "sudo",
-    "url": "https://github.com/zetaloop/ExplorerPatcher/releases/download/22621.2361.58.4_3299579/ep_setup.exe",
-    "hash": "413d999ddfb7b345c2d14137e7243d91eda255155f26217cddbd867a56581668",
+    "url": "https://github.com/zetaloop/ExplorerPatcher/releases/download/22621.2361.58.4_dd3bfca/ep_setup.exe",
+    "hash": "8add0c896f951ac2e2349f77130c703c6348a5e8857ef70354ebfa3116c4d939",
     "installer": {
         "script": "Start-Process \"$dir\\ep_setup.exe\" -WorkingDirectory \"$dir\" -Wait"
     },
