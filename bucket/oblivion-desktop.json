@@ -10,7 +10,9 @@
             "hash": "50da6d97c5124c5460d84b2d934334aeb1c1c6ce1c2607f433b62bb57f1e40fc"
         }
     },
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/bepass-org/oblivion-desktop"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
