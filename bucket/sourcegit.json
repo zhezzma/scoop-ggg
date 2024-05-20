@@ -1,13 +1,13 @@
 {
-    "version": "v0.4.7-beta",
+    "version": "8.13",
     "description": "SourceGit",
     "homepage": "https://github.com/sourcegit-scm/sourcegit",
     "license": "",
     "notes": "",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/sourcegit-scm/sourcegit/releases/download/v0.4.7-beta/oblivion-desktop-win-x64.zip",
-            "hash": "3f70da063d48c6a6921fee36436a7ca0078c499746c43c575d17476c7aeb19e3"
+            "url": "https://github.com/sourcegit-scm/sourcegit/releases/download/v8.13/sourcegit_8.13.win-x64.zip",
+            "hash": "7e06972cc6291dec0561b270f48cbd606de02b691e1a0e321ca9accc91573bec"
         }
     },
     "checkver": {
