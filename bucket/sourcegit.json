@@ -21,10 +21,10 @@
             }
         }
     },
-    "bin": "SourceGit.exe",
+    "bin": "SourceGit/SourceGit.exe",
     "shortcuts": [
         [
-            "SourceGit.exe",
+            "SourceGit/SourceGit.exe",
             "SourceGit"
         ]
     ]
