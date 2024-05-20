@@ -21,10 +21,11 @@
             }
         }
     },
-    "bin": "SourceGit/SourceGit.exe",
+    "extract_dir": "SourceGit",
+    "bin": "SourceGit.exe",
     "shortcuts": [
         [
-            "SourceGit/SourceGit.exe",
+            "SourceGit.exe",
             "SourceGit"
         ]
     ]
