@@ -1,5 +1,5 @@
 {
-    "version": "1.5.1",
+    "version": "1.5.3",
     "url": "https://github.com/peanut996/CloudflareWarpSpeedTest/releases/download/v1.3.2/CloudflareWarpSpeedTest-v1.3.2-windows-amd64.zip",
     "bin": "CloudflareWarpSpeedTest.exe",
     "hash": "",
@@ -8,8 +8,8 @@
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/peanut996/CloudflareWarpSpeedTest/releases/download/v1.5.1/CloudflareWarpSpeedTest-v1.5.1-windows-amd64.zip",
-            "hash": "md5:8d3f5954a2465c515c602a899094154b"
+            "url": "https://github.com/peanut996/CloudflareWarpSpeedTest/releases/download/v1.5.3/CloudflareWarpSpeedTest-v1.5.3-windows-amd64.zip",
+            "hash": "md5:9d9df676fe916a06770c61f9d3dd0902"
         }
     },
     "autoupdate": {
