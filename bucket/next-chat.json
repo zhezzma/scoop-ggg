@@ -1,10 +1,10 @@
 {
     "homepage": "https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web",
     "description": "One-Click to get a well-designed cross-platform ChatGPT web UI, with GPT3, GPT4 & Gemini Pro support.",
-    "version": "2.15.7",
+    "version": "2.15.8",
     "license": "MIT",
-    "url": "https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web/releases/download/v2.15.7/NextChat_2.15.7_x64-setup.exe#/dl.7z",
-    "hash": "ca4ebfa647b61f22d9e35378e558ccd0988877960e4fc70228026e6f5eb4a7c8",
+    "url": "https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web/releases/download/v2.15.8/NextChat_2.15.8_x64-setup.exe#/dl.7z",
+    "hash": "fa270d75334418713a6eb75f8549ebe71aaa01ca754f46cc1082333b45ba8b4f",
     "shortcuts": [
         [
             "NextChat.exe",
