@@ -19,16 +19,6 @@
             "Dev Sidecar"
         ]
     ],
-    "post_install": [
-        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-        "New-PersistDirectory \"$env:APPDATA\\@docmirror\\dev-sidecar-gui\" \"$persist_dir\\AppData\" -Migrate"
-    ],
-    "pre_uninstall": [
-        "$bucket = $install.bucket",
-        ". \"$bucketsdir\\$bucket\\bin\\utils.ps1\"",
-        "Stop-App",
-        "Remove-Junction \"$env:APPDATA\\@docmirror\\dev-sidecar-gui\""
-    ],
     "checkver": "github",
     "autoupdate": {
         "architecture": {
