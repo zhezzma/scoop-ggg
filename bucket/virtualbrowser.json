@@ -1,0 +1,58 @@
+{
+    // 程序的版本号，与 GitHub Release 上的 tag 一致
+    "version": "2.2.12",
+    // 程序的简短描述
+    "description": "一个开源的、可以多开的指纹浏览器。(An open-source, multi-instance fingerprint browser.)",
+    // 程序的主页
+    "homepage": "https://github.com/Virtual-Browser/VirtualBrowser",
+    // 程序的开源许可证
+    "license": "GPL-3.0-only",
+    // 定义不同 CPU 架构下的安装配置
+    "architecture": {
+        // 仅为 64 位系统提供
+        "64bit": {
+            // 下载链接
+            "url": "https://github.com/Virtual-Browser/VirtualBrowser/releases/download/2.2.12/VirtualBrowser.Setup.2.2.12.exe",
+            // 文件的 SHA256 哈希值，用于校验文件完整性
+            "hash": "e51018aa6da96b425028f6a68583e189c61daebf38ad4665af62a87247c6fbea"
+        }
+    },
+    // 自定义安装脚本，这是处理 .exe 内嵌压缩包的关键
+    "installer": {
+        "script": [
+            // 使用 Scoop 内置的 7-Zip 功能解压 .exe 安装包到一个临时文件夹 _tmp
+            // $dir 是 Scoop 的变量，表示当前程序的安装目录
+            // $fname 是 Scoop 的变量，表示下载下来的文件名 (VirtualBrowser.Setup.2.2.12.exe)
+            "Expand-7zipArchive \"$dir\\$fname\" -DestinationPath \"$dir\\_tmp\"",
+            // 接着，解压 _tmp 目录下的 $PLUGINSDIR 文件夹中的 app-64.7z 到程序的根安装目录
+            // 注意：'$PLUGINSDIR' 这里的单引号是必须的，以防止 PowerShell 将 $PLUGINSDIR 误认为变量
+            "Expand-7zipArchive \"$dir\\_tmp\\`$PLUGINSDIR`\\app-64.7z\" -DestinationPath \"$dir\"",
+            // 清理临时文件夹和下载的 .exe 文件
+            "Remove-Item \"$dir\\_tmp\", \"$dir\\$fname\" -Recurse"
+        ]
+    },
+    // 为程序创建快捷方式
+    "shortcuts": [
+        [
+            // 指向的可执行文件
+            "VirtualBrowser.exe",
+            // 在开始菜单中显示的名称
+            "VirtualBrowser"
+        ]
+    ],
+    // 检查新版本的配置
+    "checkver": {
+        // 通过 GitHub Releases 页面检查
+        "github": "https://github.com/Virtual-Browser/VirtualBrowser"
+    },
+    // 自动更新的配置
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                // 当检测到新版本时，如何生成新的下载链接
+                // $version 会被替换为 checkver 找到的新版本号
+                "url": "https://github.com/Virtual-Browser/VirtualBrowser/releases/download/$version/VirtualBrowser.Setup.$version.exe"
+            }
+        }
+    }
+}
