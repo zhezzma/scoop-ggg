@@ -10,6 +10,9 @@
 		}
 	},
 	"bin": "aish.exe",
+	"persist": [
+		".aish"
+	],
 	"checkver": {
 		"url": "https://api.github.com/repos/PowerShell/AIShell/releases",
 		"jsonpath": "$.[?(@.tag_name =~ /v?([\\d.]+(-preview\\.[\\d]+)?)$/)].tag_name",
@@ -18,9 +21,15 @@
 	"notes": [
 		"This is a preview version of AIShell. This version of AIShell module depends on PSReadLine '2.4.3-beta3' or higher",
 		"You can get the v2.4.3-beta3 version of the PSReadLine module from PowerShell Gallery. To install it, run:",
+        "Install-Module -Name PackageManagement -Force -MinimumVersion 1.4.7 -Scope CurrentUser  -AllowClobber",
+        "Install-Module -Name Microsoft.PowerShell.PSResourceGet -Force -Scope CurrentUser",
 		"Install-PSResource -Name PSReadLine -Prerelease -TrustRepository"
 	],
-	"post_install": "Install-PSResource -Name AIShell -Repository PSGallery -Prerelease -TrustRepository -ErrorAction Stop -WarningAction SilentlyContinue",
+	"post_install": [
+		"if (!(Test-Path \"$env:USERPROFILE\\.aish\")) { New-Item -ItemType Directory -Path \"$env:USERPROFILE\\.aish\" }",
+		"if (!(Test-Path \"$dir\\.aish\")) { New-Item -ItemType Junction -Path \"$dir\\.aish\" -Target \"$env:USERPROFILE\\.aish\" }",
+		"Install-PSResource -Name AIShell -Repository PSGallery -Prerelease -TrustRepository -ErrorAction Stop -WarningAction SilentlyContinue"
+	],
 	"autoupdate": {
 		"architecture": {
 			"64bit": {
