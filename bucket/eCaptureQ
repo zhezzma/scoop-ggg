@@ -1,0 +1,28 @@
+{
+    "version": "0.2.1",
+    "description": "eCaptureQ - A capture tool",
+    "homepage": "https://github.com/gojue/ecaptureQ",
+    "license": "Unknown",
+    "url": "https://github.com/gojue/ecaptureQ/releases/download/v0.2.1/eCaptureQ_0.2.1_x64-setup.exe#/dl.7z",
+    "hash": "",
+    "installer": {
+        "script": [
+            "Expand-7zipArchive \"$dir\\dl.7z\" \"$dir\" -Removal",
+            "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse -Force",
+            "Remove-Item \"$dir\\uninstall.exe\" -Force"
+        ]
+    },
+    "bin": "eCaptureQ.exe",
+    "shortcuts": [
+        [
+            "eCaptureQ.exe",
+            "eCaptureQ"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/gojue/ecaptureQ"
+    },
+    "autoupdate": {
+        "url": "https://github.com/gojue/ecaptureQ/releases/download/v$version/eCaptureQ_$version_x64-setup.exe#/dl.7z"
+    }
+}
