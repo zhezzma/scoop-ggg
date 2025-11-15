@@ -1,22 +1,42 @@
 {
-    "version": "0.2.1",
-    "description": "eCaptureQ - A GUI version of eCapture for Windows, used for capturing network traffic without installing drivers.",
-    "homepage": "https://github.com/gojue/ecaptureQ",
-    "license": "GPL-3.0-or-later",
-    "url": "https://github.com/gojue/ecaptureQ/releases/download/v0.2.1/eCaptureQ_0.2.1_x64-setup.exe",
-    "hash": "auto",
-    "innosetup": true,
-    "bin": "eCaptureQ.exe",
-    "shortcuts": [
-        [
-            "eCaptureQ.exe",
-            "eCaptureQ"
+  "version": "0.2.1",
+  "description": "eCaptureQ - An application from gojue/ecaptureQ",
+  "homepage": "https://github.com/gojue/ecaptureQ",
+  "license": "Unknown",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/gojue/ecaptureQ/releases/download/v0.2.1/eCaptureQ_0.2.1_x64-setup.exe",
+      "hash": "<SHA256>",
+      "installer": {
+        "script": [
+          "Expand-7zipArchive \"$dir\\eCaptureQ_0.2.1_x64-setup.exe\" \"$dir\\_extract\" -Removal",
+          "$setup = Get-ChildItem \"$dir\\_extract\" -Recurse -Filter '*.exe' | Where-Object { $_.Name -match 'setup|installer' } | Select-Object -First 1",
+          "if (-not $setup) { $setup = \"$dir\\eCaptureQ_0.2.1_x64-setup.exe\" }",
+          "Start-Process $setup -ArgumentList '/VERYSILENT', '/SUPPRESSMSGBOXES', '/NORESTART', \"/DIR=$dir\" -Wait"
         ]
-    ],
-    "checkver": {
-        "github": "https://github.com/gojue/ecaptureQ"
-    },
-    "autoupdate": {
-        "url": "https://github.com/gojue/ecaptureQ/releases/download/v$version/eCaptureQ_$version_x64-setup.exe"
+      },
+      "shortcuts": [
+        [
+          "eCaptureQ.exe",
+          "eCaptureQ"
+        ]
+      ],
+      "uninstaller": {
+        "script": [
+          "$uninst = Join-Path $dir 'uninstall.exe'",
+          "if (Test-Path $uninst) { Start-Process $uninst -ArgumentList '/VERYSILENT', '/SUPPRESSMSGBOXES' -Wait }"
+        ]
+      }
     }
+  },
+  "checkver": {
+    "github": "https://github.com/gojue/ecaptureQ"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/gojue/ecaptureQ/releases/download/v$version/eCaptureQ_$version_x64-setup.exe"
+      }
+    }
+  }
 }
