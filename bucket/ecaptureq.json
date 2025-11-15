@@ -1,6 +1,6 @@
 {
   "version": "0.2.1",
-  "description": "eCaptureQ - An application from gojue/ecaptureQ",
+  "description": "eCaptureQ",
   "homepage": "https://github.com/gojue/ecaptureQ",
   "license": "Unknown",
   "architecture": {
@@ -8,30 +8,17 @@
       "url": "https://github.com/gojue/ecaptureQ/releases/download/v0.2.1/eCaptureQ_0.2.1_x64-setup.exe",
       "hash": "<SHA256>",
       "installer": {
-        "script": [
-          "Expand-7zipArchive \"$dir\\eCaptureQ_0.2.1_x64-setup.exe\" \"$dir\\_extract\" -Removal",
-          "$setup = Get-ChildItem \"$dir\\_extract\" -Recurse -Filter '*.exe' | Where-Object { $_.Name -match 'setup|installer' } | Select-Object -First 1",
-          "if (-not $setup) { $setup = \"$dir\\eCaptureQ_0.2.1_x64-setup.exe\" }",
-          "Start-Process $setup -ArgumentList '/VERYSILENT', '/SUPPRESSMSGBOXES', '/NORESTART', \"/DIR=$dir\" -Wait"
-        ]
+        "innosetup": true
       },
       "shortcuts": [
-        [
-          "eCaptureQ.exe",
-          "eCaptureQ"
-        ]
+        ["eCaptureQ.exe", "eCaptureQ"]
       ],
       "uninstaller": {
-        "script": [
-          "$uninst = Join-Path $dir 'uninstall.exe'",
-          "if (Test-Path $uninst) { Start-Process $uninst -ArgumentList '/VERYSILENT', '/SUPPRESSMSGBOXES' -Wait }"
-        ]
+        "script": "Start-Process \"$dir\\uninstall.exe\" -ArgumentList '/VERYSILENT','/SUPPRESSMSGBOXES' -Wait"
       }
     }
   },
-  "checkver": {
-    "github": "https://github.com/gojue/ecaptureQ"
-  },
+  "checkver": { "github": "https://github.com/gojue/ecaptureQ" },
   "autoupdate": {
     "architecture": {
       "64bit": {
