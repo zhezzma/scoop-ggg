@@ -8,13 +8,24 @@
       "url": "https://github.com/gojue/ecaptureQ/releases/download/v0.2.1/eCaptureQ_0.2.1_x64-setup.exe",
       "hash": "<SHA256>",
       "installer": {
-        "innosetup": true
+        "script": [
+          "Expand-7zipArchive \"$dir\\eCaptureQ_0.2.1_x64-setup.exe\" \"$dir\\_extract\" -Removal",
+          "$exe = Join-Path \"$dir\\_extract\" 'eCaptureQ.exe'",
+          "$uninst = Join-Path \"$dir\\_extract\" 'uninstall.exe'",
+          "if (!(Test-Path $exe)) { throw 'eCaptureQ.exe not found in _extract' }",
+          "Move-Item $exe \"$dir\" -Force",
+          "if (Test-Path $uninst) { Move-Item $uninst \"$dir\" -Force }",
+          "Remove-Item \"$dir\\_extract\" -Recurse -Force -ErrorAction SilentlyContinue"
+        ]
       },
       "shortcuts": [
         ["eCaptureQ.exe", "eCaptureQ"]
       ],
       "uninstaller": {
-        "script": "Start-Process \"$dir\\uninstall.exe\" -ArgumentList '/VERYSILENT','/SUPPRESSMSGBOXES' -Wait"
+        "script": [
+          "$uninst = Join-Path $dir 'uninstall.exe'",
+          "if (Test-Path $uninst) { Start-Process $uninst -ArgumentList '/VERYSILENT','/SUPPRESSMSGBOXES' -Wait }"
+        ]
       }
     }
   },
