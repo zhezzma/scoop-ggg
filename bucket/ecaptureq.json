@@ -1,20 +1,11 @@
 {
     "version": "0.2.1",
-    "description": "A tool to capture packets and decrypt SSL/TLS traffic.",
+    "description": "eCaptureQ - A GUI version of eCapture for Windows, used for capturing network traffic without installing drivers.",
     "homepage": "https://github.com/gojue/ecaptureQ",
-    "license": "Unknown",
-    "architecture": {
-        "64bit": {
-            "url": "https://github.com/gojue/ecaptureQ/releases/download/v0.2.1/eCaptureQ_0.2.1_x64-setup.exe",
-            "hash": ""
-        }
-    },
-    "installer": {
-        "script": [
-            "Expand-7zipArchive \"$dir\\$fname\" \"$dir\" -Removal",
-            "Remove-Item \"$dir\\$PLUGINSDIR\", \"$dir\\uninstall.exe\" -Recurse"
-        ]
-    },
+    "license": "GPL-3.0-or-later",
+    "url": "https://github.com/gojue/ecaptureQ/releases/download/v0.2.1/eCaptureQ_0.2.1_x64-setup.exe",
+    "hash": "auto",
+    "innosetup": true,
     "bin": "eCaptureQ.exe",
     "shortcuts": [
         [
@@ -22,12 +13,10 @@
             "eCaptureQ"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/gojue/ecaptureQ"
+    },
     "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "https://github.com/gojue/ecaptureQ/releases/download/v$version/eCaptureQ_$version_x64-setup.exe"
-            }
-        }
+        "url": "https://github.com/gojue/ecaptureQ/releases/download/v$version/eCaptureQ_$version_x64-setup.exe"
     }
 }
