@@ -1,40 +1,45 @@
 {
-  "version": "0.2.1",
-  "description": "eCaptureQ",
-  "homepage": "https://github.com/gojue/ecaptureQ",
-  "license": "Unknown",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/gojue/ecaptureQ/releases/download/v0.2.1/eCaptureQ_0.2.1_x64-setup.exe",
-      "hash": "<SHA256>",
-      "installer": {
-        "script": [
-          "Expand-7zipArchive \"$dir\\eCaptureQ_0.2.1_x64-setup.exe\" \"$dir\\_extract\" -Removal",
-          "$exe = Join-Path \"$dir\\_extract\" 'eCaptureQ.exe'",
-          "$uninst = Join-Path \"$dir\\_extract\" 'uninstall.exe'",
-          "if (!(Test-Path $exe)) { throw 'eCaptureQ.exe not found in _extract' }",
-          "Move-Item $exe \"$dir\" -Force",
-          "if (Test-Path $uninst) { Move-Item $uninst \"$dir\" -Force }",
-          "Remove-Item \"$dir\\_extract\" -Recurse -Force -ErrorAction SilentlyContinue"
-        ]
-      },
-      "shortcuts": [
-        ["eCaptureQ.exe", "eCaptureQ"]
-      ],
-      "uninstaller": {
-        "script": [
-          "$uninst = Join-Path $dir 'uninstall.exe'",
-          "if (Test-Path $uninst) { Start-Process $uninst -ArgumentList '/VERYSILENT','/SUPPRESSMSGBOXES' -Wait }"
-        ]
-      }
-    }
-  },
-  "checkver": { "github": "https://github.com/gojue/ecaptureQ" },
-  "autoupdate": {
+    "version": "0.2.2",
+    "description": "eCaptureQ",
+    "homepage": "https://github.com/gojue/ecaptureQ",
+    "license": "Unknown",
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/gojue/ecaptureQ/releases/download/v$version/eCaptureQ_$version_x64-setup.exe"
-      }
+        "64bit": {
+            "url": "https://github.com/gojue/ecaptureQ/releases/download/v0.2.2/eCaptureQ_0.2.2_x64-setup.exe",
+            "hash": "424743e2ba0c3423b8b044392d98a0851b836cc119916a1a3200ba9069e4f183",
+            "installer": {
+                "script": [
+                    "Expand-7zipArchive \"$dir\\eCaptureQ_0.2.1_x64-setup.exe\" \"$dir\\_extract\" -Removal",
+                    "$exe = Join-Path \"$dir\\_extract\" 'eCaptureQ.exe'",
+                    "$uninst = Join-Path \"$dir\\_extract\" 'uninstall.exe'",
+                    "if (!(Test-Path $exe)) { throw 'eCaptureQ.exe not found in _extract' }",
+                    "Move-Item $exe \"$dir\" -Force",
+                    "if (Test-Path $uninst) { Move-Item $uninst \"$dir\" -Force }",
+                    "Remove-Item \"$dir\\_extract\" -Recurse -Force -ErrorAction SilentlyContinue"
+                ]
+            },
+            "shortcuts": [
+                [
+                    "eCaptureQ.exe",
+                    "eCaptureQ"
+                ]
+            ],
+            "uninstaller": {
+                "script": [
+                    "$uninst = Join-Path $dir 'uninstall.exe'",
+                    "if (Test-Path $uninst) { Start-Process $uninst -ArgumentList '/VERYSILENT','/SUPPRESSMSGBOXES' -Wait }"
+                ]
+            }
+        }
+    },
+    "checkver": {
+        "github": "https://github.com/gojue/ecaptureQ"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/gojue/ecaptureQ/releases/download/v$version/eCaptureQ_$version_x64-setup.exe"
+            }
+        }
     }
-  }
 }
