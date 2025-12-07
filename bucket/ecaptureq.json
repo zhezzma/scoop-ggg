@@ -1,12 +1,12 @@
 {
-    "version": "0.2.2",
+    "version": "0.3.0",
     "description": "eCaptureQ",
     "homepage": "https://github.com/gojue/ecaptureQ",
     "license": "Unknown",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/gojue/ecaptureQ/releases/download/v0.2.2/eCaptureQ_0.2.2_x64-setup.exe",
-            "hash": "424743e2ba0c3423b8b044392d98a0851b836cc119916a1a3200ba9069e4f183",
+            "url": "https://github.com/gojue/ecaptureQ/releases/download/v0.3.0/eCaptureQ_0.3.0_x64-setup.exe",
+            "hash": "1b4375fba9214b17265dd2486cdfe509ea56408133a189d8f3db107190e90ee8",
             "installer": {
                 "script": [
                     "Expand-7zipArchive \"$dir\\eCaptureQ_0.2.1_x64-setup.exe\" \"$dir\\_extract\" -Removal",
