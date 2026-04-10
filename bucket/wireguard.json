@@ -1,12 +1,12 @@
 {
     "homepage": "https://www.wireguard.com/",
-    "version": "0.6",
+    "version": "0.6.1",
     "description": "WireGuard® is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography. It aims to be faster, simpler, leaner, and more useful than IPsec, while avoiding the massive headache. It intends to be considerably more performant than OpenVPN. WireGuard is designed as a general purpose VPN for running on embedded interfaces and super computers alike, fit for many different circumstances. Initially released for the Linux kernel, it is now cross-platform (Windows, macOS, BSD, iOS, Android) and widely deployable. It is currently under heavy development, but already it might be regarded as the most secure, easiest to use, and simplest VPN solution in the industry. Config file at C:/Windows/System32/config/systemprofile/AppData/Local/WireGuard/Configurations/revomatico.conf.dpapi",
     "license": "The kernel components are released under the GPLv2, as is the Linux kernel itself. Other projects are licensed under MIT, BSD, Apache 2.0, or GPL, depending on context.",
     "architecture": {
         "64bit": {
-            "url": "https://download.wireguard.com/windows-client/wireguard-amd64-0.6.msi",
-            "hash": "71afa88a7f50494be7cf5d8ab79f467ecb8a2ad86ce6d2d1890e0e4de4644d7e"
+            "url": "https://download.wireguard.com/windows-client/wireguard-amd64-0.6.1.msi",
+            "hash": "3721a8f12b0b8ed4d9a3120b0438ebc034ea36057d8256a88e57a773e6f46ff8"
         }
     },
     "extract_dir": "WireGuard",
