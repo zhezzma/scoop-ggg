@@ -1,13 +1,13 @@
 {
-    "version": "0.6.8",
+    "version": "1.20.3",
     "description": "A desktop app for ChatGPT API (OpenAI API) that supports Windows, Mac & Linux. 开源的 ChatGPT 桌面应用，prompt 开发神器，全平台支持",
     "homepage": "https://github.com/Bin-Huang/chatbox",
     "license": {
         "identifier": "GPL-3.0 license",
         "url": "https://github.com/Bin-Huang/chatbox/blob/main/LICENSE"
     },
-    "url": "https://github.com/Bin-Huang/chatbox/releases/download/v0.6.8/Chatbox-0.6.8-Setup.exe#/dl.7z",
-    "hash": "0cb44499345970f29e0e97efd7df8c1812b13840b6cb5f15637d7b6267793a2a",
+    "url": "https://github.com/Bin-Huang/chatbox/releases/download/v1.20.3/Chatbox-1.20.3-Setup.exe#/dl.7z",
+    "hash": "874171c6c7358ff3915f01412eb036154a5ded7a76c4663fb0f592d2c5c23b13",
     "architecture": {
         "64bit": {
             "pre_install": [
