@@ -1,10 +1,10 @@
 {
     "homepage": "https://github.com/Greedeks/GTweak",
     "description": "Portable Tool for an Ideal Windows Setup. Includes Windows activation, disabling telemetry, system optimization, and various tweaks.",
-    "version": "5.5.3",
+    "version": "5.5.4",
     "license": "BSD-3-Clause",
-    "url": "https://github.com/Greedeks/GTweak/releases/download/5.5.3/GTweak.zip",
-    "hash": "daf4d00341c58763af3c2da2fd7ba8426bb2cf7f167d376feb79926fae9e02be",
+    "url": "https://github.com/Greedeks/GTweak/releases/download/5.5.4/GTweak.zip",
+    "hash": "a505bb3de37fcd9b88532125ef53841f899c0adcdc7ea99ebe35d156e92edba9",
     "bin": "GTweak.exe",
     "shortcuts": [
         [
