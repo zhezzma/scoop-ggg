@@ -1,16 +1,16 @@
 {
-    "version": "1.25",
+    "version": "1.26",
     "description": "Open-source image editor focused on PSD compatibility and workflows familiar to Adobe Photoshop users.",
     "homepage": "https://github.com/SethRobinson/Patchy",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/SethRobinson/Patchy/releases/download/v1.25/PatchyWindowsNoInstaller.zip",
-            "hash": "aa5160df00884b6c858f51d2d3178b5e39c276919f638a381cfba1da3e0817c4"
+            "url": "https://github.com/SethRobinson/Patchy/releases/download/v1.26/PatchyWindowsNoInstaller.zip",
+            "hash": "3b8aaae33614f9856597936d5424adfb653aaf1af22891ab91a45743e49c9449"
         },
         "arm64": {
-            "url": "https://github.com/SethRobinson/Patchy/releases/download/v1.25/PatchyWindowsArm64NoInstaller.zip",
-            "hash": "6050252b0c7b50371873914359d532d543a63eb9fd288dcfd7984431450cc6f2"
+            "url": "https://github.com/SethRobinson/Patchy/releases/download/v1.26/PatchyWindowsArm64NoInstaller.zip",
+            "hash": "556d2b56f7ec94cdd770007d3931bdcfb334ee8d0def6a7644eb74518af21b4e"
         }
     },
     "extract_dir": "Patchy",
