@@ -1,0 +1,41 @@
+{
+    "version": "0.24.0-rc.2",
+    "description": "Image editing; an open-source, clean-room reimplementation of Adobe Photoshop, rebuilt in pure Rust",
+    "homepage": "https://getartcraft.com/apps/photocraft",
+    "license": "MIT|Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/storytold/photocraft/releases/download/v0.24.0-rc.2/photocraft-0.24.0-rc.2-windows-x64-portable.zip",
+            "hash": "54581c919d31a85b9217a14d9f6000db2bba6fdc585d7d569f9504997dbd0269"
+        },
+        "arm64": {
+            "url": "https://github.com/storytold/photocraft/releases/download/v0.24.0-rc.2/photocraft-0.24.0-rc.2-windows-arm64-portable.zip",
+            "hash": "dc686b72a214065176d92ff7719cb4abd298f70c0f134a2263166c441063a01d"
+        }
+    },
+    "bin": "photocraft-cli.exe",
+    "shortcuts": [
+        [
+            "photocraft.exe",
+            "PhotoCraft"
+        ]
+    ],
+    "persist": "PhotoCraftData",
+    "checkver": {
+        "url": "https://api.github.com/repos/storytold/photocraft/releases",
+        "regex": "/releases/tag/v([0-9.]+(?:-rc\\.[0-9]+)?)\""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/storytold/photocraft/releases/download/v$version/photocraft-$version-windows-x64-portable.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/storytold/photocraft/releases/download/v$version/photocraft-$version-windows-arm64-portable.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS.txt"
+        }
+    }
+}
